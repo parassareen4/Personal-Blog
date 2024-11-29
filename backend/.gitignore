@@ -1,3 +1,70 @@
-node_modules
-.DS_Store
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+/node_modules
+/.pnp
+.pnp.js
+
+# Build outputs
+/build
+/dist
+
+# Next.js or similar frameworks
+/.next
+/out
+
+# Static file caches
+.cache
+
+# Testing
+/coverage
+/.nyc_output
+/.jest-cache
+/.jest-test-results.json
+
+# Environment variables
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# VSCode files
+.vscode/*
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+
+# IDEs and editors
+.idea
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.temp
+
+# Logs from npm
+npm-debug.log
+yarn-debug.log
+
+# MongoDB
+/data/db
+
+# Miscellaneous
+!.gitkeep
