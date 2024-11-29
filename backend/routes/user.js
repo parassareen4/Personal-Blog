@@ -17,7 +17,13 @@ router.post('/signup',async(req,res)=>{
 
 
 router.post('/login',async(req,res)=>{
-    const {email,password}
+    const {email,password} =req.body;
+    try{
+        const user = await User.findOne({email});
+        if(!user){
+            res.status(404).json({message:'User not found'})
+        }
+    }
 })
 
 export default router;
