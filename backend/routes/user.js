@@ -1,5 +1,6 @@
 import express from 'express';
 import User from '../models/User.js';
+import jwt from 'jsonwebtoken';
 
 
 const router = express.Router();
@@ -24,17 +25,22 @@ router.post('/login',async(req,res)=>{
         if(!user){
             res.status(404).json({message:'User not found'})
         }
-        
-        else if(user.password == password){
-            const token = "dadsddadad";
-            res.json({token})
-
-
+        else{
+            const isPasswordCorrect = await user.comparePassword(password);
+            if(!isPasswordCorrect){
+                res.status(401).json({message:'Incorrect password'})
+            }
+            else{
+                const token = jwt.sign({_id:user._id},process.env.JWT_SECRET);
+                res.json({token})
+            }
         }
     }
     catch(err){
+        console.log(err.message)
         res.status(500).json({message:err.message})
     }
+   
 })
 
 
