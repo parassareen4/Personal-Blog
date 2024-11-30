@@ -32,7 +32,7 @@ router.post('/login',async(req,res)=>{
             }
             else{
                 const token = jwt.sign({user},process.env.JWT_SECRET);
-                console.log(user)
+                req.headers.authorization = `Bearer ${token}`;
                 res.json({token})
             }
         }
@@ -41,6 +41,19 @@ router.post('/login',async(req,res)=>{
         console.log(err.message)
         res.status(500).json({message:err.message})
     }
+   
+})
+
+router.get('/profile',async(req,res)=>{
+    const {email} = req.user;
+    try{
+        const user = await User.findOne({email});
+        res.json(user)
+    }
+    catch(err){
+        res.status(500).json({message:err.message})
+    }
+     
    
 })
 
