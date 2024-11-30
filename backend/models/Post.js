@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import User from "./User.js";
 
 const postSchema = new mongoose.Schema({
     title:{
