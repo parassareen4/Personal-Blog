@@ -4,12 +4,12 @@ import authentication from '../middlewares/auth.js';
 
 const router = express.Router();
 
-router.get('all',authentication,async(req,res)=>{
+router.get('/all',authentication,async(req,res)=>{
     const posts = await Post.find({author:req.user._id});
     res.json(posts)
 })
 
-router.post('creste',authentication,async(req,res)=>{
+router.post('/create',authentication,async(req,res)=>{
     const {title,content} = req.body;
     const post = new Post ({title,content,author:req.user._id});
     try{
@@ -21,3 +21,5 @@ router.post('creste',authentication,async(req,res)=>{
     }
 })
 
+
+export default router;
