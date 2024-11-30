@@ -1,7 +1,6 @@
 import express from 'express';
 import Post from '../models/Post.js';
 import authentication from '../middlewares/auth.js';
-import { ObjectId } from 'mongodb';
 
 const router = express.Router();
 
