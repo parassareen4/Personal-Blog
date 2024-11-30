@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
-import User from '../models/User.js';
- 
+
 export default function authentication(req,res,next){
     const token = req.headers.authorization?.split(' ')[1];
     if(!token){

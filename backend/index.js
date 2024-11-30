@@ -3,7 +3,11 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import userRoute from './routes/user.js';
-import authentication from './middlewares/auth.js';
+
+
+import './models/User.js';
+
+
 
 dotenv.config();
 
@@ -16,7 +20,7 @@ app.use(cors());
 
 mongoose.connect(process.env.MONGODB_URI)
 
-app.use('/api/user',userRoute,authentication);
+app.use('/api/user',userRoute);
 
 
 

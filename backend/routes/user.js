@@ -1,7 +1,7 @@
 import express from 'express';
 import User from '../models/User.js';
 import jwt from 'jsonwebtoken';
-
+import authentication from '../middlewares/auth.js';
 
 const router = express.Router();
 
@@ -44,15 +44,9 @@ router.post('/login',async(req,res)=>{
    
 })
 
-router.get('/profile',async(req,res)=>{
-    const {email} = req.user;
-    try{
-        const user = await User.findOne({email});
-        res.json(user)
-    }
-    catch(err){
-        res.status(500).json({message:err.message})
-    }
+router.get('/profile',authentication,async(req,res)=>{
+    console.log(req.user)
+    res.json(req.user)
      
    
 })
