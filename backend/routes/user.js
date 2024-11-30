@@ -31,8 +31,8 @@ router.post('/login',async(req,res)=>{
                 res.status(401).json({message:'Incorrect password'})
             }
             else{
-                const token = jwt.sign({user},process.env.JWT_SECRET);
-                req.headers.authorization = `Bearer ${token}`;
+                const token = jwt.sign({ _id:user._id,name:user.name,email:user.email},process.env.JWT_SECRET);
+                
                 res.json({token})
             }
         }
@@ -45,11 +45,16 @@ router.post('/login',async(req,res)=>{
 })
 
 router.get('/profile',authentication,async(req,res)=>{
-    console.log(req.user)
-    res.json(req.user)
-     
-   
+    const profile = await User.findById(req.user._id);
+    if(!profile){
+        res.status(404).json({message:'User not found'})
+    }
+    else{
+        res.json(profile)
+    }
 })
+
+
 
 
 
