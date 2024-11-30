@@ -55,7 +55,4 @@ router.get('/profile',authentication,async(req,res)=>{
 })
 
 
-
-
-
 export default router;
