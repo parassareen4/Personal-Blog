@@ -26,7 +26,7 @@ router.post('/login',async(req,res)=>{
             res.status(404).json({message:'User not found'})
         }
         else{
-            const isPasswordCorrect = await user.comparePassword(password);
+            const isPasswordCorrect = user.password === password;
             if(!isPasswordCorrect){
                 res.status(401).json({message:'Incorrect password'})
             }
