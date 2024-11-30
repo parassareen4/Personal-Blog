@@ -21,5 +21,37 @@ router.post('/create',authentication,async(req,res)=>{
     }
 })
 
+router.get('/:id',authentication,async(req,res)=>{
+    const {id} = req.params;
+    try{
+        const post = await Post.findById(id);
+        if(!post){
+            res.status(404).json({message:'Post not found'})
+        }
+        else{
+            res.json(post)
+        }
+    }
+    catch(err){
+        res.status(500).json({message:err.message})
+    }
+})
+
+router.delete('/delete/:id',authentication,async(req,res)=>{
+    const {id} = req.params;
+    try{
+        const post = await Post.findByIdAndDelete(id);
+        if(!post){
+            res.status(404).json({message:'Post not found'})
+        }
+        else{
+            res.json('Post deleted successfully')
+        }
+    }
+    catch(err){
+        res.status(500).json({message:err.message})
+    }
+})
+
 
 export default router;
