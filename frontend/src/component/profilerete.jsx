@@ -23,7 +23,7 @@ export const GetProfile = () => {
   return (
     <>
       <div>
-        <button className="bg-gray-700 text-red-500" onClick={getdata}>
+        <button  onClick={getdata}>
           getData
         </button>
 
