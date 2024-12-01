@@ -34,7 +34,8 @@ function Allposts() {
     useEffect(()=>{
         getPosts();
     },[])
-  return (<>
+  return (<div className='allposts'>
+
    <div>Allposts</div>
     {loading && <div>Loading...</div>}
     {error && <div>Error</div>}
@@ -44,7 +45,7 @@ function Allposts() {
 
     <button onClick={()=>navigate('/createpost')}>Create Post</button>
 
-  </>
+  </div>
    
   )
 }
