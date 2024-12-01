@@ -45,7 +45,7 @@ function Createpost() {
 
     return (
         <div className='createpost'>
-            <div>Create Post</div>
+            {/* <div>Create Post</div>
             
             {loading && <div>Loading...</div>}
             {error && <div>Error creating post</div>}
@@ -69,7 +69,7 @@ function Createpost() {
                 disabled={loading || !title || !content}
             >
                 {loading ? 'Creating...' : 'Create'}
-            </button>
+            </button> */}
         </div>
     )
 }
