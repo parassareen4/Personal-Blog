@@ -65,8 +65,7 @@ function Allposts() {
     <div className='posts' onClick={()=>navigate(`/expandpost/${props._id}`)}>
         <h1>{props.title}</h1>
         <p>{props.content}</p>
-        <p>{props.auth}</p>
-        <p>{props.createdAt}</p>
+        <p>{props.author}</p>
 
     </div>
 
