@@ -36,7 +36,7 @@ function Allposts() {
    <div>Allposts</div>
     {loading && <div>Loading...</div>}
     {error && <div>Error</div>}
-    {!loading  && posts.map(post => <div key={post._id}>{post.title},{post.content},<button onClick={()=>navigate(`/${post._id}`)}>go </button></div>)}
+    {!loading  && posts.map(post => <div key={post._id}>{post.title},{post.content},<button onClick={()=>navigate(`/expandpost/${post._id}`)}>Expand</button></div>)}
 
     <button onClick={getPosts}>Get Posts</button>
 
