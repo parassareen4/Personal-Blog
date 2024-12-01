@@ -1,4 +1,6 @@
 import  { useState } from 'react'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 function Allposts() {
 
@@ -6,42 +8,38 @@ function Allposts() {
     const [posts, setPosts] =useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
+    const navigate = useNavigate()
 
     const getPosts = async () => {
         try {
-            const res = await fetch(`${window.API_URL}/api/post/all`,{
-                headers: {
-                    Authorization: ` Bearer ${localStorage.getItem("token")}`,
-                  }})
-            if(!res.ok){
+            const res = await axios.get(`${window.API_URL}/api/post/all`,{
+                headers:{
+                    Authorization:`Bearer ${localStorage.getItem('token')}`
+                }
+
+            }
+        ) 
+            setPosts(res.data)
+            setLoading(false)
+            console.log(res.data)
+            if(!res.data){
                 setError(true)
                 return
             }
-            setLoading(true)
-            console.log(res)
-            console.log(
-                "fetched posts successfully"
-            )
-            const data = await res.json()
-            console.log(data)
-            setPosts(data)
-            setLoading(false)
+          
         } catch (e) {
-            setError(true)
+            console.log(e)
         }
     }
     
-
-
-
-
-
   return (<>
    <div>Allposts</div>
     {loading && <div>Loading...</div>}
     {error && <div>Error</div>}
-    {!loading && !error && posts.map(post => <div key={post._id}>{post.title}</div>)}
+    {!loading  && posts.map(post => <div key={post._id}>{post.title},{post.content}</div>)}
     <button onClick={getPosts}>Get Posts</button>
+
+    <button onClick={()=>navigate('/createpost')}>Create Post</button>
 
   </>
    
