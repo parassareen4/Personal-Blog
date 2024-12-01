@@ -40,5 +40,12 @@
         border-radius: 60px;
         color: $color5;
         background-color: $color6;
+        &:hover{
+            opacity: 0.8;
+            border: 2px solid $color7;
+            cursor: pointer;
+            transition: 0.3s;
+
+        }
     }
 }
