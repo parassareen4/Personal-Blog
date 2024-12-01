@@ -36,7 +36,8 @@ function Allposts() {
    <div>Allposts</div>
     {loading && <div>Loading...</div>}
     {error && <div>Error</div>}
-    {!loading  && posts.map(post => <div key={post._id}>{post.title},{post.content}</div>)}
+    {!loading  && posts.map(post => <div key={post._id}>{post.title},{post.content},<button onClick={()=>navigate(`/${post._id}`)}>go </button></div>)}
+
     <button onClick={getPosts}>Get Posts</button>
 
     <button onClick={()=>navigate('/createpost')}>Create Post</button>
