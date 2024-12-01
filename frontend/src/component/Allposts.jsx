@@ -66,6 +66,7 @@ function Allposts() {
         <h1>{props.title}</h1>
         <p>{props.content}</p>
         <p>{props.author}</p>
+        <p>{new Date(props.date).toLocaleDateString()}</p>
 
     </div>
 
