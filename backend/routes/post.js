@@ -5,7 +5,7 @@ import authentication from '../middlewares/auth.js';
 const router = express.Router();
 
 router.get('/all',authentication,async(req,res)=>{
-    const posts = await Post.find({author:req.user._id});
+    const posts = await Post.find();
     res.json(posts)
 })
 
