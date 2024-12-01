@@ -34,19 +34,25 @@ function Allposts() {
     useEffect(()=>{
         getPosts();
     },[])
-  return (<div className='allposts'>
+  return (
+    <div className='mainallposts'>
+         <div className='allposts'>
 
-   <div>Allposts</div>
+<h1>Allposts</h1>
+ {loading && <div>Loading...</div>}
 
-    {loading && <div>Loading...</div>}
+ {error && <div>Error</div>}
 
-    {error && <div>Error</div>}
+ {!loading  && posts.map(post => <div key={post._id}><Posts {...post}></Posts><button onClick={()=>navigate(`/expandpost/${post._id}`)}>Expand</button></div>)}
 
-    {!loading  && posts.map(post => <div key={post._id}><Posts {...post}></Posts><button onClick={()=>navigate(`/expandpost/${post._id}`)}>Expand</button></div>)}
+ 
 
-    <button onClick={()=>navigate('/createpost')}>Create Post</button>
+</div>
 
-  </div>
+
+<button onClick={()=>navigate('/createpost')}>Create Post</button>
+    </div>
+ 
    
   )
 }
@@ -57,7 +63,7 @@ function Allposts() {
     <div className='posts'>
         <h1>{props.title}</h1>
         <p>{props.content}</p>
-        <p>{props.author}</p>
+        <p>{props.auth}</p>
         <p>{props.createdAt}</p>
 
     </div>
