@@ -29,7 +29,31 @@
         }
     }
     >button{
-        width: 21rem;
+        &:first-of-type{
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            width: 7rem;
+            height: 3rem;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            border: 2px solid $color1;
+            border-radius: 10px;
+            color: $color5;
+            background-color: $color6;
+            &:hover{
+                background-color: $color7;
+                color: $color1;
+                border: 2px solid $color7;
+                cursor: pointer;
+                transition: 0.3s;
+
+            }
+            
+
+        }
+        &:last-of-type{
+            width: 21rem;
         height: 4rem;
         font-size: 1.5rem;
         margin-top: 1rem;
@@ -52,6 +76,9 @@
             opacity: 0.8;
 
         }
+            
+        }
+        
     }
     
     

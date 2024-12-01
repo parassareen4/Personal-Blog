@@ -1,0 +1,58 @@
+.signin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: $color3;
+    >div{
+        font-size: 2rem;
+        color: $color5;
+        margin-bottom: 1rem;
+    }
+    >input{
+        width: 20rem;
+        height: 2rem;
+        border: 2px solid $color1;
+        border-radius: 10px;
+        padding: 9px;
+        margin: 0.5rem;
+        font-size: 1.2rem;
+        color: $color1;
+        background-color: $color5;
+        &:focus{
+            outline: none;
+            border: 2px solid $color5;
+            background-color: $color4;
+            color: $color5;
+        }
+    }
+    >button{
+        width: 21rem;
+        height: 4rem;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        border: 2px solid $color1;
+        border-radius: 10px;
+        padding: 9px;
+        color: $color5;
+        background-color: $color6;
+        &:hover{
+            background-color: $color7;
+            color: $color1;
+            border: 2px solid $color7;
+            cursor: pointer;
+            transition: 0.3s;
+
+        }
+
+        &:focus{
+            outline: none;
+            opacity: 0.8;
+
+        }
+    }
+    
+    
+  }

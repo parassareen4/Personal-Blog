@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Signup = () => {
   const [name, setName] = useState("");
@@ -25,8 +25,9 @@ export const Signup = () => {
 
   return (
     
-  
-          <div className="signup">
+  <>
+  <div className="signup">
+            <button onClick={()=>navigate('/signin')}>Signin</button>
             <div>Signup</div>
             
               <input
@@ -58,6 +59,8 @@ export const Signup = () => {
               </button>
             
           </div>
+  </>
+          
 
     
   );

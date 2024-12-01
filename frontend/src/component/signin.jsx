@@ -22,36 +22,32 @@ export const Signin = () => {
   };
 
   return (
-    <div >
-      <div>
-        <div>
-          <div>
+ 
+          <div className="signin">
             <div >Signin</div>
 
-            <div>
+            
               <input
                 onChange={(e) => setEmail(e.target.value)}
                 type="text"
                 placeholder="email"
               />
-            </div>
-            <div >
+            
+           
               <input
                 onChange={(e) => setPassword(e.target.value)}
                 type="text"
                 placeholder="password"
               />
-            </div>
-            <div>
+           
+            
               <button
                 onClick={signin}
               >
                 Signin
               </button>
-            </div>
+            
           </div>
-        </div>
-      </div>
-    </div>
+
   );
 };
