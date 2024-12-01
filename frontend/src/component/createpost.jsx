@@ -1,9 +1,11 @@
 import axios from 'axios'
 import { useState } from 'react'
+import {  useNavigate } from 'react-router-dom'
  
 
 function Createpost() {
 
+    const navigate = useNavigate()
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
     const [error, setError] = useState(false)
@@ -34,6 +36,7 @@ function Createpost() {
             console.log(e)
         }
     }
+    
 
   return (
     <div className='createpost'>
@@ -43,7 +46,12 @@ function Createpost() {
         
             <input onChange={(e) => setTitle(e.target.value)} type="text" placeholder="title" />
             <input onChange={(e) => setContent(e.target.value)} type="text" placeholder="content" />
-            <button onClick={Create}>Create</button>
+            <button onClick={()=>{
+                Create()
+               
+                navigate('/allposts')
+            }
+            }>Create</button>
         
 
     </div>
