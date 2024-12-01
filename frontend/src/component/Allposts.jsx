@@ -1,4 +1,4 @@
-import  { useState } from 'react'
+import  { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
@@ -31,14 +31,16 @@ function Allposts() {
             console.log(e)
         }
     }
-    
+    useEffect(()=>{
+        getPosts();
+    },[])
   return (<>
    <div>Allposts</div>
     {loading && <div>Loading...</div>}
     {error && <div>Error</div>}
     {!loading  && posts.map(post => <div key={post._id}>{post.title},{post.content},<button onClick={()=>navigate(`/expandpost/${post._id}`)}>Expand</button></div>)}
 
-    <button onClick={getPosts}>Get Posts</button>
+    {/* <button onClick={getPosts}>Get Posts</button> */}
 
     <button onClick={()=>navigate('/createpost')}>Create Post</button>
 
