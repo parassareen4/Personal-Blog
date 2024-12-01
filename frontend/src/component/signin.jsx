@@ -17,12 +17,12 @@ export const Signin = () => {
       alert("u have logged in successfully");
       navigate("/profile");
     } catch (e) {
-      console.log(e);
+      console.log("error", e);
     }
   };
 
   return (
-    <div className>
+    <div className="flex justify-center items-center h-screen">
       <div className=" flex justify-center mt-32">
         <div>
           <div className="bg-[#e7f0fe] rounded-lg shadow-xl  text-xl font-bold h-96 w-80 ">
