@@ -1,86 +1,100 @@
-.allposts{
+.allposts {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 45%;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 1.5rem;
     background-color: $color3;
+    border-radius: 10px;
     border: 1px solid $color5;
-    >h1{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    flex-wrap: wrap;
+    
+
+    > h1 {
         font-size: 2rem;
         color: $color5;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
     }
 
     > div {
-        font-size: 1rem;
-        color: $color5;
-        margin: 1rem 0;
-        flex-wrap: wrap;
-        
-        width: 40rem;
-        min-height: 10rem; 
-        align-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+        min-height: 10rem;
         border: 1px solid $color5;
-        text-align: center; 
-        white-space: normal;
-        overflow-wrap: break-word; 
-        padding: 1rem;
+        padding: 1.2rem;
         border-radius: 10px;
         background-color: $color4;
-        overflow: auto;
-        justify-content: center;
-        align-items: center;
-      
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+        overflow:auto;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        
+
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
         > h1 {
-          font-size: 1.5rem;
-          color: $color1;
-          margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            color: $color1;
+            margin-bottom: 0.5rem;
         }
-      
+
         > p {
-          font-size: 1rem;
-          color: $color1;
-          margin-bottom: 0.5rem;
+            font-size: 1rem;
+            color: $color1;
+            margin-bottom: 0.5rem;
         }
-      }
-      
-    
+    }
 }
 
-.mainallposts{
-    
+.mainallposts {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    
+    justify-content: flex-start;
+    padding: 2rem;
     background-color: $color3;
-    >div{
-        font-size: 1rem;
-        color: $color5;
-        margin-bottom: 1rem;
-    }
-    >button{
-        position: fixed;
+    min-height: 100vh;
 
-        bottom: 15rem;
-        left: 13rem;
-        width: 10rem;
+    > button {
+        width: 12rem;
         height: 4rem;
         font-size: 1.2rem;
-        margin-top: 1rem;
+        margin-top: 2rem;
         border: 2px solid $color1;
-        border-radius: 60px;
+        border-radius: 50px;
         color: $color5;
         background-color: $color6;
-        &:hover{
-            opacity: 0.8;
-            border: 2px solid $color7;
-            cursor: pointer;
-            transition: 0.3s;
+        text-align: center;
+        transition: all 0.3s ease;
 
+        &:hover {
+            background-color: $color7;
+            color: $color1;
+            border-color: $color7;
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+            opacity: 0.8;
         }
     }
 }
