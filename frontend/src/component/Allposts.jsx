@@ -2,13 +2,14 @@ import  { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-function Allposts() {
 
+function Allposts() {
+    const navigate = useNavigate()
 
     const [posts, setPosts] =useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
-    const navigate = useNavigate()
+    
 
     const getPosts = async () => {
         try {
@@ -43,7 +44,7 @@ function Allposts() {
 
  {error && <div>Error</div>}
 
- {!loading  && posts.map(post => <div key={post._id}><Posts {...post}></Posts><button onClick={()=>navigate(`/expandpost/${post._id}`)}>Expand</button></div>)}
+ {!loading  && posts.map(post => <div key={post._id}><Posts {...post} ></Posts></div>)}
 
  
 
@@ -59,8 +60,9 @@ function Allposts() {
 
 
  function Posts(props) {
+    const navigate = useNavigate()
   return (
-    <div className='posts'>
+    <div className='posts' onClick={()=>navigate(`/expandpost/${props._id}`)}>
         <h1>{props.title}</h1>
         <p>{props.content}</p>
         <p>{props.auth}</p>
