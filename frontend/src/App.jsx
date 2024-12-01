@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import { Signup } from "./component/signup";
 import { Signin } from "./component/signin";
+import AllPosts from "./component/Allposts.jsx";
 import { GetProfile } from "./component/profilerete";
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
+          <Route path="/allposts" element={<AllPosts />} />
+
           <Route path="/profile" element={<GetProfile />} />
         </Routes>
       </BrowserRouter>
