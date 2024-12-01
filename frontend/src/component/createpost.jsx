@@ -36,15 +36,15 @@ function Createpost() {
     }
 
   return (
-    <div>
+    <div className='createpost'>
         <div>Createpost</div>
         {loading && <div>Loading...</div>}
         {error && <div>Error</div>}
-        <div>
+        
             <input onChange={(e) => setTitle(e.target.value)} type="text" placeholder="title" />
             <input onChange={(e) => setContent(e.target.value)} type="text" placeholder="content" />
             <button onClick={Create}>Create</button>
-        </div>
+        
 
     </div>
   )
