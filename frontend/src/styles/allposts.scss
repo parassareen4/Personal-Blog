@@ -12,45 +12,39 @@
         margin-bottom: 1rem;
     }
 
-    >div{
+    > div {
         font-size: 1rem;
         color: $color5;
-        margin-bottom: 1rem;
-        margin-top: 1rem;
+        margin: 1rem 0;
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        
         width: 40rem;
-        height: 10rem;
+        min-height: 10rem; /* Adjusted for flexibility */
         align-content: center;
         border: 1px solid $color5;
-        text-align: center;
-        text-justify: center;
+        text-align: center; 
+        white-space: normal;
+        overflow-wrap: break-word; 
         padding: 1rem;
         border-radius: 10px;
         background-color: $color4;
-        >h1{
-            font-size: 1.5rem;
-            color: $color1;
-            margin-bottom: 0.5rem;
-            
+        overflow: auto;
+        justify-content: center;
+        align-items: center;
+      
+        > h1 {
+          font-size: 1.5rem;
+          color: $color1;
+          margin-bottom: 0.5rem;
         }
-        >p{
-            font-size: 1rem;
-            color: $color1;
-            margin-bottom: 0.5rem;
-            
+      
+        > p {
+          font-size: 1rem;
+          color: $color1;
+          margin-bottom: 0.5rem;
         }
-        >p{
-            font-size: 1rem;
-           // color: $color1;
-            margin-bottom: 0.5rem;
-          //  text-align: center;
-          //  text-justify: center;
-            
-        }
-        
-    }
+      }
+      
     
 }
 
