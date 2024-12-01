@@ -1,20 +1,25 @@
  .expandpost{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 25%;
-    margin-top: 12%;
-    width: 50%;
-    height: 50vh;
-    background-color: $color3;
-    border: 1px solid $color5;
-    text-align: center; 
-    white-space: normal;
-    overflow-wrap: break-word; 
-    border-radius: 10px;
-    padding: 1rem;
-    overflow: auto;
+    font-size: 1rem;
+        color: $color5;
+        margin: 1rem 0;
+        flex-wrap: wrap;
+        
+        width: 50%;
+        height: 50%;
+        min-height: 10rem; 
+        align-content: center;
+        border: 1px solid $color5;
+        text-align: center; 
+        white-space: normal;
+        overflow-wrap: break-word; 
+        padding: 1rem;
+        border-radius: 10px;
+        background-color: $color4;
+        overflow: auto;
+        justify-content: center;
+        align-items: center;
+        margin-left: 25rem;
+        margin-top: 10rem;
 
 
     >div{
