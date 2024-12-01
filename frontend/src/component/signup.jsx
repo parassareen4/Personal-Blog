@@ -24,43 +24,41 @@ export const Signup = () => {
   };
 
   return (
-    <div >
-      <div >
-        <div>
-          <div>
+    
+  
+          <div className="signup">
             <div>Signup</div>
-            <div>
+            
               <input
                 onChange={(e) => setName(e.target.value)}
                 type="text"
                 placeholder="name"
               />
-            </div>
-            <div >
+            
+            
               <input
                 onChange={(e) => setEmail(e.target.value)}
                 type="text"
                 placeholder="email"
               />
-            </div>
-            <div >
+            
+            
               <input
                 onChange={(e) => setPassword(e.target.value)}
                 type="text"
                 placeholder="password"
               />
-            </div>
-            <div >
+            
+            
               <button
             
                 onClick={signup}
               >
                 Signup
               </button>
-            </div>
+            
           </div>
-        </div>
-      </div>
-    </div>
+
+    
   );
 };

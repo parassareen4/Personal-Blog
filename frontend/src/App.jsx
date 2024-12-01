@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.scss";
+import "./index.scss"
 import { Signup } from "./component/signup";
 import { Signin } from "./component/signin";
 import AllPosts from "./component/Allposts.jsx";
