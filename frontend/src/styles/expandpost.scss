@@ -8,10 +8,14 @@
     width: 50%;
     height: 50vh;
     background-color: $color3;
-    border: 1px solid $color5;  
+    border: 1px solid $color5;
+    text-align: center; 
+    white-space: normal;
+    overflow-wrap: break-word; 
     border-radius: 10px;
     padding: 1rem;
     overflow: auto;
+
 
     >div{
         font-size: 2rem;
