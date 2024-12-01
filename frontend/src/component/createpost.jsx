@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
+ 
 
 function Createpost() {
 
@@ -25,53 +26,36 @@ function Createpost() {
                 }
             );
             setLoading(false)
-
-            if (!res.data) {
+            console.log(res.data)
+            if(!res.data){
                 setError(true)
                 return
             }
-
-            // On success, clear the inputs and navigate
-            setTitle('')
-            setContent('')
-            navigate('/allposts')
-
+          
         } catch (e) {
-            setLoading(false)
             console.log(e)
-            setError(true) // Set error state if the request fails
         }
     }
+    
 
-    return (
-        <div className='createpost'>
-            {/* <div>Create Post</div>
-            
-            {loading && <div>Loading...</div>}
-            {error && <div>Error creating post</div>}
+  return (
+    <div className='createpost'>
+        <div>Createpost</div>
+        {loading && <div>Loading...</div>}
+        {error && <div>Error</div>}
+        
+            <input onChange={(e) => setTitle(e.target.value)} type="text" placeholder="title" />
+            <input onChange={(e) => setContent(e.target.value)} type="text" placeholder="content" />
+            <button onClick={()=>{
+                Create()
+               
+                navigate('/allposts')
+            }
+            }>Create</button>
+        
 
-            <input 
-                value={title} 
-                onChange={(e) => setTitle(e.target.value)} 
-                type="text" 
-                placeholder="Title" 
-            />
-
-            <textarea 
-                value={content} 
-                onChange={(e) => setContent(e.target.value)} 
-                placeholder="Content" 
-                rows="4" 
-            />
-
-            <button 
-                onClick={Create} 
-                disabled={loading || !title || !content}
-            >
-                {loading ? 'Creating...' : 'Create'}
-            </button> */}
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Createpost
