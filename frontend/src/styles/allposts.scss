@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
     background-color: $color3;
 
     >div{
@@ -27,6 +26,18 @@
 
 .mainallposts{
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+    background-color: $color3;
+    >div{
+        font-size: 1rem;
+        color: $color5;
+        margin-bottom: 1rem;
+    }
     >button{
         position: fixed;
 
