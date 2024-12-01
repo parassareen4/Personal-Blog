@@ -37,7 +37,7 @@ function ExpandPost() {
     <>
         {loading && <div>Loading...</div>}
         {error && <div>Error</div>}
-        {!loading && <div>{post.title},{post.content}</div>}
+        {!loading && <div>{post.title},{post.content},{post.author},{post.date}</div>}
 
 
     </>
