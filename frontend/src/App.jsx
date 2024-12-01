@@ -5,6 +5,7 @@ import { Signin } from "./component/signin";
 import AllPosts from "./component/Allposts.jsx";
 import CreatePost from "./component/createpost.jsx";
 import { GetProfile } from "./component/profilerete";
+import ExpandPost from "./component/ExpandPost.jsx"
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/allposts" element={<AllPosts />} />
           <Route path="/createpost" element={<CreatePost />} />
-
+          <Route path="/expandpost/:id" element={<ExpandPost />} />
           <Route path="/profile" element={<GetProfile />} />
         </Routes>
       </BrowserRouter>
