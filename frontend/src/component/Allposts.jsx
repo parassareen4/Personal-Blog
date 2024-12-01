@@ -37,11 +37,12 @@ function Allposts() {
   return (<div className='allposts'>
 
    <div>Allposts</div>
-    {loading && <div>Loading...</div>}
-    {error && <div>Error</div>}
-    {!loading  && posts.map(post => <div key={post._id}>{post.title},{post.content},<button onClick={()=>navigate(`/expandpost/${post._id}`)}>Expand</button></div>)}
 
-    {/* <button onClick={getPosts}>Get Posts</button> */}
+    {loading && <div>Loading...</div>}
+
+    {error && <div>Error</div>}
+
+    {!loading  && posts.map(post => <div key={post._id}><Posts {...post}></Posts><button onClick={()=>navigate(`/expandpost/${post._id}`)}>Expand</button></div>)}
 
     <button onClick={()=>navigate('/createpost')}>Create Post</button>
 
@@ -49,5 +50,22 @@ function Allposts() {
    
   )
 }
+
+
+ function Posts(props) {
+  return (
+    <div className='posts'>
+        <h1>{props.title}</h1>
+        <p>{props.content}</p>
+        <p>{props.author}</p>
+        <p>{props.createdAt}</p>
+
+    </div>
+
+  )
+}
+
+
+
 
 export default Allposts
