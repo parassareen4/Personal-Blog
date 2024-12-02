@@ -39,8 +39,9 @@ function Allposts() {
 
   return (
     <div className="mainallposts">
+      <h1>Allposts</h1>
       <div className="allposts">
-        <h1>Allposts</h1>
+        
 
         {loading && <div>Loading...</div>}
         {error && <div>Error loading posts</div>}
