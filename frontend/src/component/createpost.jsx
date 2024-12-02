@@ -34,7 +34,7 @@ function Createpost() {
             // On success, clear the inputs and navigate
             setTitle('')
             setContent('')
-            navigate('/allposts')
+            navigate('/home')
 
         } catch (e) {
             setLoading(false)
@@ -44,7 +44,8 @@ function Createpost() {
     }
 
     return (
-        <div className='createpost'>
+        <div>
+             <div className='createpost'>
             <div>Create Post</div>
             
             {loading && <div>Loading...</div>}
@@ -71,6 +72,8 @@ function Createpost() {
                 {loading ? 'Creating...' : 'Create'}
             </button>
         </div>
+        </div>
+       
     )
 }
 
