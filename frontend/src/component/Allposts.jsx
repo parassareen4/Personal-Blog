@@ -58,6 +58,7 @@ function Allposts() {
   );
 }
 
+
 function Posts(props) {
   const navigate = useNavigate();
 

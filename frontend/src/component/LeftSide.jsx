@@ -8,9 +8,9 @@ function LeftSide() {
   const navigate = useNavigate();
   const [content, setContent] = useState(null);
 
-//   useEffect(() => {
-//     setContent(<AllPosts />);
-//   }, []);
+  useEffect(() => {
+    setContent(<AllPosts />);
+  }, []);
 
   return (
     <div>
