@@ -21,6 +21,23 @@ router.post('/create',authentication,async(req,res)=>{
     }
 })
 
+router.put('/update/:id',authentication,async(req,res)=>{
+    const {id} = req.params;
+    const {title,content} = req.body;
+    try{
+        const post = await Post.findByIdAndUpdate(id,{title,content,author:req.user._id});
+        if(!post){
+            res.status(404).json({message:'Post not found'})
+        }
+        else{
+            res.json(post)
+        }
+    }
+    catch(err){
+        res.status(500).json({message:err.message})
+    }
+})
+
 router.get('/:id',authentication,async(req,res)=>{
     const {id} = req.params;
     try{
@@ -52,6 +69,7 @@ router.delete('/delete/:id',authentication,async(req,res)=>{
         res.status(500).json({message:err.message})
     }
 })
+
 
 
 export default router;
