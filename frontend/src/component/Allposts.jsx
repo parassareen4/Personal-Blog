@@ -63,10 +63,10 @@ function Posts(props) {
 
   return (
     <div className="posts" onClick={() => navigate(`/expandpost/${props._id}`)}>
-      <h1>{props.title}</h1>
-      <p>{props.content}</p>
-      <p>Author: {props.author?.name || 'Unknown'}</p>
-      <p>Date: {new Date(props.date).toLocaleDateString()}</p>
+      <h1 className="titleall">{props.title}</h1>
+      <p className="contentall">{props.content}</p>
+      <p className="authorall">Author: {props.author?.name || 'Unknown'}</p>
+      <p className="dateall">Date: {new Date(props.date).toLocaleDateString()}</p>
     </div>
   );
 }
