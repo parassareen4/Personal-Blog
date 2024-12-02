@@ -5,4 +5,45 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+
+    div{
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        >div{
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 100%;
+            color: #000;
+
+            height: 100%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+    }
+
+
+
 }
