@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
+
 
 export const GetProfile = () => {
   const [id, setId] = useState("");
@@ -7,6 +9,9 @@ export const GetProfile = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [posts, setPosts] = useState([]);
+
+  const navigate = useNavigate();
+  
 
 
   const getdata = async () => {
@@ -55,7 +60,7 @@ export const GetProfile = () => {
                 return(
                     <div>
                       
-                        <div>
+                        <div onClick={() => navigate(`/expandpost/${post._id}`)}>
 
                         
                     <h1>title : {post.title}</h1>
