@@ -45,9 +45,6 @@ export const GetProfile = () => {
 
   return (
     <>
-     
-
-
         <div> 
             <div className="pprofile">
             <div> name :{name}</div>
@@ -55,8 +52,6 @@ export const GetProfile = () => {
           
             </div>
 
-        
-          
           <div className="pposts">
             <h1>My Posts</h1>
             {posts.map((post) => {
