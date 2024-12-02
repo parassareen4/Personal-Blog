@@ -10,8 +10,8 @@
    
     margin: auto;
     padding: 2rem;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: $color4;
+    border: 1px solid $color2;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -20,7 +20,7 @@
     > div {
         font-size: 1.8rem;
         font-weight: bold;
-        color: #333;
+        color: $color5;
         margin-bottom: 1rem;
     }
 
@@ -32,7 +32,7 @@
         margin-bottom: 1.5rem;
         border: 1px solid #ddd;
         border-radius: 8px;
-        background-color: #fff;
+        background-color: $color5;
         transition: all 0.3s ease;
 
         &:focus {
@@ -68,7 +68,8 @@
         }
 
         &:disabled {
-            background-color: #cccccc;
+            background-color: $color6;
+            opacity: 0.5;
             cursor: not-allowed;
         }
     }
