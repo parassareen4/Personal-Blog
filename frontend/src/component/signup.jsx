@@ -16,7 +16,6 @@ export const Signup = () => {
         password: password,
       });
 
-      alert("user have signed up successfully");
       navigate("/signin");
     } catch (e) {
       console.log(e);

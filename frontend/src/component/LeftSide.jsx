@@ -21,7 +21,7 @@ function LeftSide() {
           <div onClick={() => setContent(<div>Create Post Page Coming Soon...</div>)}>Create Post</div>
         </div>
       </div>
-      {/* Render content dynamically */}
+      
       <div className="content">
         {content}
       </div>
