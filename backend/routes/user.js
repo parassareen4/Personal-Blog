@@ -58,9 +58,9 @@ router.get('/profile',authentication,async(req,res)=>{
     }
 })
 router.get('/profile/posts',authentication,async(req,res)=>{
-    const posts = await Post.findById(req.user._id);
+    const posts = await Post.find({author:req.user._id});
     if(!posts){
-        res.status(404).json({message:'User not found'})
+        res.send(req._id)
     }
     else{
         res.json(posts)
