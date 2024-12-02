@@ -52,7 +52,9 @@ function Allposts() {
             </div>
           ))}
       </div>
-
+      <button onClick={() => navigate('/profile')}>
+        Profile   
+      </button>
       <button onClick={() => navigate('/createpost')}>Create Post</button>
     </div>
   );
