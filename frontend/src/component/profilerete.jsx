@@ -50,11 +50,13 @@ export const GetProfile = () => {
           <div>pass : {password}</div>
           <div>{posts.map((post)=>{
             return(
-              <div>
-                <div>id: {post._id}</div>
+              <div className="mainallposts" >
+                <div className="allposts">
                 <div> name :{post.content}</div>
                 <div> email : {post.title}</div>
                 <div>pass : {post.date}</div>
+                </div>
+                
               </div>
             )
           })}
