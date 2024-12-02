@@ -15,7 +15,7 @@ export const Signin = () => {
       });
       localStorage.setItem("token", res.data.token);
       alert("u have logged in successfully");
-      navigate("/allposts");
+      navigate("/leftside");
     } catch (e) {
       console.log("error", e);
     }

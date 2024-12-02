@@ -5,7 +5,9 @@ import { Signin } from "./component/signin";
 import AllPosts from "./component/Allposts.jsx";
 import CreatePost from "./component/createpost.jsx";
 import { GetProfile } from "./component/profilerete";
-import ExpandPost from "./component/ExpandPost.jsx"
+import ExpandPost from "./component/ExpandPost.jsx";
+import LeftSide from "./component/LeftSide.jsx";
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
+          <Route path="/leftside" element={<LeftSide />} />
           <Route path="/allposts" element={<AllPosts />} />
           <Route path="/createpost" element={<CreatePost />} />
           <Route path="/expandpost/:id" element={<ExpandPost />} />
