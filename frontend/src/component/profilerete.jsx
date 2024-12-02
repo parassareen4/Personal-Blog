@@ -6,6 +6,8 @@ export const GetProfile = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [posts, setPosts] = useState([]);
+
 
   const getdata = async () => {
     const res = await axios.get(`${window.API_URL}/api/user/profile`, {
@@ -20,8 +22,20 @@ export const GetProfile = () => {
 
    
   };
+
+  const getpost = async () => {
+    const res = await axios.get(`${window.API_URL}/api/user/profile/posts`, {
+      headers: {
+        Authorization: ` Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+      setPosts(res.data)
+
+  }
+
   useEffect(()=>{
     getdata()
+    getpost()
   })
 
   return (
@@ -34,8 +48,20 @@ export const GetProfile = () => {
           <div> name :{name}</div>
           <div> email : {email}</div>
           <div>pass : {password}</div>
+          <div>{posts.map((post)=>{
+            return(
+              <div>
+                <div>id: {post._id}</div>
+                <div> name :{post.content}</div>
+                <div> email : {post.title}</div>
+                <div>pass : {post.date}</div>
+              </div>
+            )
+          })}
+          </div>
         </div>
       </div>
     </>
   );
 };
+
