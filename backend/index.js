@@ -6,6 +6,8 @@ import userRoute from "./routes/user.js";
 import postRoute from "./routes/post.js";
 
 import "./models/User.js";
+import'./models/Comment.js'; 
+
 
 dotenv.config();
 
