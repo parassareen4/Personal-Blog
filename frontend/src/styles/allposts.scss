@@ -57,53 +57,8 @@
         }
       }
     }
-  
-    button {
-
-
-        &:first-of-type{
-            position: fixed;
-      left: 50px;
-      top: 50px;
-      background-color: #1da1f2; 
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-  
-      &:hover {
-        background-color: #187bcc; 
-      }
-
-        }
-
-        &:last-of-type{
-            position: fixed;
-      left: 50px;
-      bottom: 50px;
-      background-color: #1da1f2; 
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-  
-      &:hover {
-        background-color: #187bcc; 
-      }
-
-        }
-
-    
       
-    }
+    
   
    
     @media (max-width: 768px) {
