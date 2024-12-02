@@ -37,7 +37,7 @@ function ExpandPost() {
     <div className='expandpost'>
         {loading && <div>Loading...</div>}
         {error && <div>Error</div>}
-        {!loading && <div><h1>{post.title}</h1><p>{post.content}</p><p>{post.author}</p><p>{new Date(post.date).toLocaleDateString()}</p></div>}
+        {!loading && <div><h1>{post.title}</h1><p>{post.content}</p><p>Author: {post.author?.name || 'Unknown'}</p><p>Date: {new Date(post.date).toLocaleDateString()}</p></div>}
 
 
     </div>

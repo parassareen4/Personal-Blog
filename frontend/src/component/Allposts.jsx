@@ -46,7 +46,7 @@ function Allposts() {
         {error && <div>Error loading posts</div>}
         {!loading &&
           !error &&
-          posts.map((post) => (
+          posts.slice().reverse().map((post) => (
             <div key={post._id}>
               <Posts {...post} />
             </div>
