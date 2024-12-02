@@ -1,5 +1,7 @@
 import express from 'express';
 import User from '../models/User.js';
+import Post from '../models/Post.js';
+
 import jwt from 'jsonwebtoken';
 import authentication from '../middlewares/auth.js';
 
@@ -9,7 +11,7 @@ router.post('/signup',async(req,res)=>{
     const {name,email,password} = req.body;
 
     const user = new User({name,email,password});
-    
+
     try{
         const savedUser = await user.save();
         res.json(savedUser)
@@ -33,7 +35,7 @@ router.post('/login',async(req,res)=>{
                 res.status(401).json({message:'Incorrect password'})
             }
             else{
-                const token = jwt.sign({ _id:user._id,name:user.name,email:user.email},process.env.JWT_SECRET);
+                const token = jwt.sign({ _id:user._id},process.env.JWT_SECRET);
                 
                 res.json({token})
             }
@@ -53,6 +55,15 @@ router.get('/profile',authentication,async(req,res)=>{
     }
     else{
         res.json(profile)
+    }
+})
+router.get('/profile/posts',authentication,async(req,res)=>{
+    const posts = await Post.findById(req.user._id);
+    if(!posts){
+        res.status(404).json({message:'User not found'})
+    }
+    else{
+        res.json(posts)
     }
 })
 
