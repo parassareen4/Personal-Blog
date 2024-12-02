@@ -53,12 +53,16 @@ export const GetProfile = () => {
             
                 return(
                     <div>
-                    <div> content :{post.content}</div>
+                        <div>
+                        
                     <div>title : {post.title}</div>
-                    <div>date : {post.date}</div>
+                    <div> content :{post.content}</div>
+                    <div>date : {new Date(post.date).toDateString()}</div>
                     <div>likes : {post.likes}</div>
                     <div>comments : {post.comments}</div>
                     </div>
+                        </div>
+                    
                 )
               })}
               </div>

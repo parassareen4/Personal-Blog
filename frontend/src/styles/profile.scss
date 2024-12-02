@@ -14,7 +14,15 @@
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 
         >div{
-           
+            background-color: #253341; 
+        margin-bottom: 15px;
+        padding: 15px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        word-wrap: break-word; 
+        display: flex;
+        flex-direction: column;
 
         }
 
