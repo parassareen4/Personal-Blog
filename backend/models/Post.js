@@ -4,7 +4,7 @@ const postSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
-        trim: true // Optional: Removes whitespace
+        trim: true 
     },
     content: {
         type: String,
@@ -34,3 +34,5 @@ const postSchema = new mongoose.Schema({
 }});
 
 module.exports = mongoose.model('Post', postSchema);
+
+export default postSchema;
