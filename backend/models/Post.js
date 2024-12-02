@@ -1,10 +1,10 @@
 import mongoose from 'mongoose';
 
-const postSchema = new mongoose.Schema({    
+const postSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
-        trim: true 
+        trim: true
     },
     content: {
         type: String,
@@ -21,17 +21,18 @@ const postSchema = new mongoose.Schema({
                 ref: 'Comment'
             }
         ],
-        default: [] 
+        default: []
     },
     author: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        required: true ,
+        required: true
+    },
     date: {
         type: Date,
         default: Date.now
     }
-}});
+});
 
 const Post = mongoose.model('Post', postSchema);
 
