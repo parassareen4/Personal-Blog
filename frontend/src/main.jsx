@@ -1,4 +1,4 @@
-window.API_URL = "https://personal-blog-23s6.onrender.com";
+window.API_URL = "http://localhost:5000";
 import { createRoot } from "react-dom/client";
 import "./index.scss";
 import App from "./App.jsx";

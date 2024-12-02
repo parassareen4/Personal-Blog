@@ -1,86 +1,121 @@
-.allposts{
+.mainallposts {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 45%;
-    background-color: $color3;
-    border: 1px solid $color5;
-    >h1{
-        font-size: 2rem;
-        color: $color5;
-        margin-bottom: 1rem;
-    }
-
-    > div {
-        font-size: 1rem;
-        color: $color5;
-        margin: 1rem 0;
-        flex-wrap: wrap;
-        
-        width: 40rem;
-        min-height: 10rem; 
-        align-content: center;
-        border: 1px solid $color5;
-        text-align: center; 
-        white-space: normal;
-        overflow-wrap: break-word; 
-        padding: 1rem;
+    background-color: #15202b; // Dark background
+    color: #e1e8ed; // Light text color
+    min-height: 100vh;
+    padding: 20px;
+  
+    .allposts {
+      width: 90%; // Dynamic width, responsive to screen size
+      max-width: 600px; // Restrict maximum width
+      background: #192734; // Slightly lighter dark for contrast
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  
+      h1 {
+        text-align: center;
+        font-size: 24px;
+        color: #1da1f2; // Twitter blue
+        margin-bottom: 20px;
+      }
+  
+      .posts {
+        background-color: #253341; // Post container background
+        margin-bottom: 15px;
+        padding: 15px;
         border-radius: 10px;
-        background-color: $color4;
-        overflow: auto;
-        justify-content: center;
-        align-items: center;
-      
-        > h1 {
-          font-size: 1.5rem;
-          color: $color1;
-          margin-bottom: 0.5rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        word-wrap: break-word; // Ensure long text wraps
+        display: flex;
+        flex-direction: column;
+  
+        &:hover {
+          background-color: #1da1f2; // Blue hover effect
+          color: #ffffff;
         }
-      
-        > p {
-          font-size: 1rem;
-          color: $color1;
-          margin-bottom: 0.5rem;
+  
+        h1 {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+  
+        p {
+          font-size: 14px;
+          margin: 2px 0;
+  
+          &.author {
+            color: #1da1f2; // Author text blue
+            cursor: pointer;
+          }
+  
+          &.date {
+            color: #8899a6; // Grey text for the date
+          }
         }
       }
-      
-    
-}
-
-.mainallposts{
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    
-    background-color: $color3;
-    >div{
-        font-size: 1rem;
-        color: $color5;
-        margin-bottom: 1rem;
     }
-    >button{
-        position: fixed;
-
-        bottom: 15rem;
-        left: 13rem;
-        width: 10rem;
-        height: 4rem;
-        font-size: 1.2rem;
-        margin-top: 1rem;
-        border: 2px solid $color1;
-        border-radius: 60px;
-        color: $color5;
-        background-color: $color6;
-        &:hover{
-            opacity: 0.8;
-            border: 2px solid $color7;
-            cursor: pointer;
-            transition: 0.3s;
-
-        }
+  
+    button {
+      position: fixed;
+      left: 50px;
+      bottom: 50px;
+      background-color: #1da1f2; // Twitter blue
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background-color: #187bcc; // Slightly darker blue on hover
+      }
     }
-}
+  
+    // Media Queries for Responsiveness
+    @media (max-width: 768px) {
+      .allposts {
+        width: 95%; // Take more width on smaller screens
+        padding: 15px;
+      }
+  
+      button {
+        left: 20px;
+        bottom: 20px;
+        font-size: 14px; // Make the button smaller on mobile
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .allposts {
+        width: 100%; // Take full width on very small screens
+        padding: 10px;
+      }
+  
+      .posts {
+        padding: 10px;
+      }
+  
+      h1 {
+        font-size: 20px; // Make post title smaller on small screens
+      }
+  
+      p {
+        font-size: 12px; // Adjust font size for small screens
+      }
+  
+      button {
+        width: 100%; // Make the button full-width on small screens
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+    }
+  }
+  

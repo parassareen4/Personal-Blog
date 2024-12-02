@@ -5,8 +5,9 @@ import authentication from '../middlewares/auth.js';
 const router = express.Router();
 
 router.get('/all',async(req,res)=>{
-    const posts = await Post.find().populate('author').populate('comments');
+    const posts = await Post.find().populate('author','name email').populate('comments','name email');
     res.json(posts)
+
 })
 
 router.post('/create',authentication,async(req,res)=>{
