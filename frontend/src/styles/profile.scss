@@ -7,22 +7,14 @@
     padding: 20px;
 
     >div{
-       
+        width: 90%; 
+        max-width: 600px; 
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 
         >div{
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid black;
-            border-radius: 10px;
-            width: 100%;
-            color: #000;
-
-            height: 100%;
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+           
 
         }
 
