@@ -42,7 +42,7 @@ router.put('/update/:id',authentication,async(req,res)=>{
 router.get('/:id',authentication,async(req,res)=>{
     const {id} = req.params;
     try{
-        const post = await Post.findById(id).populate('author','comments');
+        const post = await Post.findById(id).populate('author','name email').populate('comments','name email');
         if(!post){
             res.status(404).json({message:'Post not found'})
         }
