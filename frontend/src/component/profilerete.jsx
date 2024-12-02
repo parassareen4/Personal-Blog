@@ -49,12 +49,14 @@ export const GetProfile = () => {
 
 
         <div> 
-
-          
-        
-          <div> name :{name}</div>
+            <div className="pprofile">
+            <div> name :{name}</div>
           <div> email : {email}</div>
           <div>pass : {password}</div>
+            </div>
+
+        
+          
           <div className="pposts">
             <h1>My Posts</h1>
             {posts.map((post) => {
