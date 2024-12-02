@@ -18,6 +18,7 @@
       margin-bottom: 20px;
       background-color: $color3;
       width: 100%;
+      z-index: 1000;
       
     }
     
@@ -34,38 +35,53 @@
       .posts {
         background-color: #253341; 
         margin-bottom: 2rem;
-        padding: 3rem;
+        padding: 1rem;
         border-radius: 10px;
         transition: all 0.3s ease;
         cursor: pointer;
         word-wrap: break-word; 
         display: flex;
         flex-direction: column;
+        position: relative;
   
         &:hover {
           background-color: $color4; 
           color: #ffffff;
         }
-  
-        h1 {
-          font-size: 18px;
-          font-weight: bold;
-          margin-bottom: 5px;
+        .titleall{
+          font-size: 2rem;
+          background-color:$color3;
+          text-align: center;
+          padding: 1rem;
+          margin-bottom: 1rem;
+          color: white;
+          border-radius: 10px;
+
+          
+        }
+        .contentall{
+          font-size: 1.5rem;
+          padding: 1rem;
+          margin-bottom: 5rem;
+
+          
+        }
+        .authorall{
+          position: absolute;
+          font-size: 1.2rem;
+          left: 1rem;
+          bottom: 0px;
+          color: #8899a6;
+        }
+        .dateall{
+          position: absolute;
+          font-size: 1.2rem;
+          right: 1rem;
+          bottom: 0px;
+          color: #8899a6;
         }
   
-        p {
-          font-size: 14px;
-          margin: 2px 0;
-  
-          &.author {
-            color: #1da1f2; 
-            cursor: pointer;
-          }
-  
-          &.date {
-            color: #8899a6;
-          }
-        }
+        
       }
     }
       
@@ -112,14 +128,4 @@
   }
   
 
-  .titleall{
-    font-size: 18px;
-    background-color:rgb(255, 0, 0);
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: white;
-    padding: 1rem;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    
-  }
+  
