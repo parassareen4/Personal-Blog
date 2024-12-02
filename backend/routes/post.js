@@ -5,7 +5,7 @@ import authentication from '../middlewares/auth.js';
 const router = express.Router();
 
 router.get('/all',authentication,async(req,res)=>{
-    const posts = await Post.find({author:req.user._id});
+    const posts = await Post.find({author:req.user._id}).populate('author');
     res.json(posts)
 })
 
@@ -25,7 +25,7 @@ router.put('/update/:id',authentication,async(req,res)=>{
     const {id} = req.params;
     const {title,content} = req.body;
     try{
-        const post = await Post.findByIdAndUpdate(id,{title,content,author:req.user._id});
+        const post = await Post.findByIdAndUpdate(id,{title,content,author:req.user._id}).populate('author');
         if(!post){
             res.status(404).json({message:'Post not found'})
         }
@@ -41,7 +41,7 @@ router.put('/update/:id',authentication,async(req,res)=>{
 router.get('/:id',authentication,async(req,res)=>{
     const {id} = req.params;
     try{
-        const post = await Post.findById(id);
+        const post = await Post.findById(id).populate('author');
         if(!post){
             res.status(404).json({message:'Post not found'})
         }
@@ -57,7 +57,7 @@ router.get('/:id',authentication,async(req,res)=>{
 router.delete('/delete/:id',authentication,async(req,res)=>{
     const {id} = req.params;
     try{
-        const post = await Post.findByIdAndDelete(id);
+        const post = await Post.findByIdAndDelete(id).populate('author');
         if(!post){
             res.status(404).json({message:'Post not found'})
         }
