@@ -43,24 +43,25 @@ export const GetProfile = () => {
       <div>
 
 
-        <div>
-          <div>id: {id}</div>
+        <div> 
+         
           <div> name :{name}</div>
           <div> email : {email}</div>
           <div>pass : {password}</div>
-          <div>{posts.map((post)=>{
-            return(
-              <div className="mainallposts" >
-                <div className="allposts">
-                <div> name :{post.content}</div>
-                <div> email : {post.title}</div>
-                <div>pass : {post.date}</div>
-                </div>
-                
+          <div className="pposts">
+            {posts.map((post) => {
+            
+                return(
+                    <div>
+                    <div> content :{post.content}</div>
+                    <div>title : {post.title}</div>
+                    <div>date : {post.date}</div>
+                    <div>likes : {post.likes}</div>
+                    <div>comments : {post.comments}</div>
+                    </div>
+                )
+              })}
               </div>
-            )
-          })}
-          </div>
         </div>
       </div>
     </>
