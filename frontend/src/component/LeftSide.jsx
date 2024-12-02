@@ -3,11 +3,14 @@ import React from 'react'
 function LeftSide() {
   return (
     <div className="leftside">
+        <div>
         <div>Home</div>
         <div>Profile</div>
         <div>Settings</div>
         <div>Logout</div>
         <div>Create Post</div>
+        </div>
+        
     </div>
   )
 }
