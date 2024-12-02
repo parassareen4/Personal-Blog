@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AllPosts from "./Allposts.jsx";
 import { GetProfile } from './profilerete';
@@ -7,6 +7,10 @@ import Createpost from './createpost';
 function LeftSide() {
   const navigate = useNavigate();
   const [content, setContent] = useState(null);
+
+  useEffect(() => {
+    setContent(<AllPosts />);
+  }, []);
 
   return (
     <div>
@@ -18,7 +22,7 @@ function LeftSide() {
           <div onClick={() => setContent(<div>Settings Page Coming Soon...</div>)}>Settings</div>
           <div onClick={() => {
             localStorage.removeItem("token"); // Handle logout logic
-            navigate("/login");
+            navigate("/signin");
           }}>Logout</div>
           <div onClick={() => setContent(<Createpost />)}>Create Post</div>
         </div>

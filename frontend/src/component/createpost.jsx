@@ -34,7 +34,7 @@ function Createpost() {
             // On success, clear the inputs and navigate
             setTitle('')
             setContent('')
-            navigate('/home')
+            navigate('/leftside')
 
         } catch (e) {
             setLoading(false)
