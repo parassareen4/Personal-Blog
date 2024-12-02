@@ -2,14 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #e1e8ed; // Light text color
+    color: #e1e8ed;
     min-height: 100vh;
     padding: 20px;
   
     .allposts {
-      width: 90%; // Dynamic width, responsive to screen size
-      max-width: 600px; // Restrict maximum width
-       // Slightly lighter dark for contrast
+      width: 90%; 
+      max-width: 600px; 
       border-radius: 15px;
       padding: 20px;
       box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
@@ -17,23 +16,23 @@
       h1 {
         text-align: center;
         font-size: 24px;
-        color: #1da1f2; // Twitter blue
+        color: #1da1f2; 
         margin-bottom: 20px;
       }
   
       .posts {
-        background-color: #253341; // Post container background
+        background-color: #253341; 
         margin-bottom: 15px;
         padding: 15px;
         border-radius: 10px;
         transition: all 0.3s ease;
         cursor: pointer;
-        word-wrap: break-word; // Ensure long text wraps
+        word-wrap: break-word; 
         display: flex;
         flex-direction: column;
   
         &:hover {
-          background-color: $color4; // Blue hover effect
+          background-color: $color4; 
           color: #ffffff;
         }
   
@@ -48,12 +47,12 @@
           margin: 2px 0;
   
           &.author {
-            color: #1da1f2; // Author text blue
+            color: #1da1f2; 
             cursor: pointer;
           }
   
           &.date {
-            color: #8899a6; // Grey text for the date
+            color: #8899a6;
           }
         }
       }
@@ -66,7 +65,7 @@
             position: fixed;
       left: 50px;
       top: 50px;
-      background-color: #1da1f2; // Twitter blue
+      background-color: #1da1f2; 
       color: white;
       font-size: 16px;
       font-weight: bold;
@@ -77,7 +76,7 @@
       transition: all 0.3s ease;
   
       &:hover {
-        background-color: #187bcc; // Slightly darker blue on hover
+        background-color: #187bcc; 
       }
 
         }
@@ -86,7 +85,7 @@
             position: fixed;
       left: 50px;
       bottom: 50px;
-      background-color: #1da1f2; // Twitter blue
+      background-color: #1da1f2; 
       color: white;
       font-size: 16px;
       font-weight: bold;
@@ -97,7 +96,7 @@
       transition: all 0.3s ease;
   
       &:hover {
-        background-color: #187bcc; // Slightly darker blue on hover
+        background-color: #187bcc; 
       }
 
         }
@@ -106,7 +105,7 @@
       
     }
   
-    // Media Queries for Responsiveness
+   
     @media (max-width: 768px) {
       .allposts {
         width: 95%; // Take more width on smaller screens
