@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const GetProfile = () => {
   const [id, setId] = useState("");
@@ -17,15 +17,17 @@ export const GetProfile = () => {
     setName(res.data.name);
     setEmail(res.data.email);
     setPassword(res.data.password);
-    alert("fetched userprofile successfully");
+
+   
   };
+  useEffect(()=>{
+    getdata()
+  })
 
   return (
     <>
       <div>
-        <button  onClick={getdata}>
-          getData
-        </button>
+
 
         <div>
           <div>id: {id}</div>
