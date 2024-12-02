@@ -40,7 +40,7 @@ export const GetProfile = () => {
 
   return (
     <>
-      <div>
+     
 
 
         <div> 
@@ -49,17 +49,20 @@ export const GetProfile = () => {
           <div> email : {email}</div>
           <div>pass : {password}</div>
           <div className="pposts">
+            <h1>My Posts</h1>
             {posts.map((post) => {
             
                 return(
                     <div>
+                      
                         <div>
+
                         
-                    <div>title : {post.title}</div>
-                    <div> content :{post.content}</div>
-                    <div>date : {new Date(post.date).toDateString()}</div>
-                    <div>likes : {post.likes}</div>
-                    <div>comments : {post.comments}</div>
+                    <h1>title : {post.title}</h1>
+                    <p> content :{post.content}</p>
+                    <p>date : {new Date(post.date).toDateString()}</p>
+                    <p>likes : {post.likes}</p>
+                    <p>comments : {post.comments}</p>
                     </div>
                         </div>
                     
@@ -67,7 +70,7 @@ export const GetProfile = () => {
               })}
               </div>
         </div>
-      </div>
+      
     </>
   );
 };
