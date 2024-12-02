@@ -49,7 +49,9 @@ export const GetProfile = () => {
 
 
         <div> 
-         
+
+          
+        
           <div> name :{name}</div>
           <div> email : {email}</div>
           <div>pass : {password}</div>
