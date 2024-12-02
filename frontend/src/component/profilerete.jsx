@@ -52,7 +52,7 @@ export const GetProfile = () => {
             <div className="pprofile">
             <div> name :{name}</div>
           <div> email : {email}</div>
-          <div>pass : {password}</div>
+          
             </div>
 
         
