@@ -4,6 +4,22 @@
     align-items: center;
     color: #e1e8ed;
     min-height: 100%;
+
+
+    >h1 {
+      position: sticky;
+      top: 0;
+      height: 4rem;
+      text-align: center;
+      line-height: 5rem;
+      padding: 1rem;
+      font-size: 24px;
+      color: #1da1f2; 
+      margin-bottom: 20px;
+      background-color: $color3;
+      width: 100%;
+      
+    }
     
   
     .allposts {
@@ -13,16 +29,7 @@
       
       
   
-      >h1 {
-        position: sticky;
-        top: 0;
-        height: 4rem;
-        text-align: center;
-        font-size: 24px;
-        color: #1da1f2; 
-        margin-bottom: 20px;
-        background-color: aquamarine;
-      }
+      
   
       .posts {
         background-color: #253341; 
