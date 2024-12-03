@@ -10,7 +10,7 @@
     width: 80%;
     height: 60%;
     border-radius: 50px;
-    background-image: radial-gradient(circle, #dfe6e9 0%, #2d3436 72%);
+    background-image: radial-gradient(circle, #b2bec3 0%, #b2bec3 72%);
     background-size: 100% 100%;
     background-position: center center;
     display: flex;
@@ -20,15 +20,11 @@
     padding: 1.5rem;
     gap: 30px;
     transition: background-size 0.5s ease, background-position 0.5s ease;
-    &:hover {
-      background-image: radial-gradient(circle, #dfe6e9 0%, #2d3436 80%);
-      background-size: 110% 110%;
-      background-position: center center;
-    }
+
     > div {
       font-size: 3rem;
       border-bottom: 1px solid $color10;
-      color: $color9;
+      color: $color10;
       transition: 0.3s all;
     }
     > input {
@@ -70,15 +66,6 @@
       border-radius: 10px;
       transition: 0.3s all;
       color: $color10;
-      &:hover {
-        background-color: $color10;
-        color: $color9;
-        font-size: 1.9rem;
-      }
     }
   }
-}
-
-.createpost > div:hover .create-post-tittle {
-  color: $color10;
 }
