@@ -43,7 +43,9 @@ export const Signin = () => {
           placeholder="password"
         />
 
-        <button onClick={signin}>Signin</button>
+        <button className="btn" onClick={signin}>
+          Signin
+        </button>
       </motion.div>
     </div>
   );
