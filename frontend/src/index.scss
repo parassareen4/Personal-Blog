@@ -1,17 +1,17 @@
-@import './styles/static.scss';
-@import './styles/signin.scss';
-@import './styles/signup.scss';
-@import './styles/profile.scss';
-@import './styles/createpost.scss';
-@import './styles/allposts.scss';
-@import './styles/expandpost.scss';
-@import './styles/leftside.scss';
+@import "./styles/static.scss";
+@import "./styles/signin.scss";
+@import "./styles/signup.scss";
+@import "./styles/profile.scss";
+@import "./styles/createpost.scss";
+@import "./styles/allposts.scss";
+@import "./styles/expandpost.scss";
+@import "./styles/leftside.scss";
 
 body {
   margin: 0;
   background-color: $color3;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,6 +19,6 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

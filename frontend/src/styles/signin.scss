@@ -9,7 +9,7 @@
     padding: 1.5rem;
     width: 40%;
     height: 50vh;
-    background-color: #2d3436;
+    background-color: $color10;
     border-radius: 50px;
     display: flex;
     justify-content: center;
@@ -18,7 +18,7 @@
     position: relative;
 
     > div {
-      color: #dfe6e9;
+      color: $color9;
       font-size: 3rem;
       position: relative;
     }
@@ -28,18 +28,18 @@
       min-height: 15%;
       outline: none;
       border: none;
-      background-color: #2d3436;
-      border-bottom: 2px solid #dfe6e9;
+      background-color: $color10;
+      border-bottom: 2px solid $color9;
       transition: 0.3s all;
       font-size: 1rem;
-      color: #dfe6e9;
+      color: $color9;
 
       &:focus {
         width: 70%;
       }
     }
     > button {
-      background-color: #0984e3;
+      background-color: $color11;
       width: 38%;
       height: 18%;
       padding: 0.5rem;
@@ -48,14 +48,9 @@
       border-radius: 10px;
       position: relative;
       margin: 1.5rem;
-      color: #dfe6e9;
+      color: $color9;
       font-size: x-large;
 
-      &::before {
-        padding: 1px;
-        background-color: red;
-        position: absolute;
-      }
       &:hover {
         opacity: 0.8;
       }

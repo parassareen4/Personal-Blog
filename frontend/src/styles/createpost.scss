@@ -1,88 +1,64 @@
 .createpost {
-    position: absolute;
-    top: 50%;
-    left: 3rem;
+  width: 100%;
+  height: 100vh;
+  color: $color10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  > div {
+    width: 80%;
+    height: 60%;
+    border-radius: 50px;
+    background-image: radial-gradient(circle, #dfe6e9 0%, #2d3436 72%);
+    background-size: 100% 100%;
+    background-position: center center;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 60%;
-   
-    margin: auto;
-    padding: 2rem;
-    background-color: $color4;
-    border: 1px solid $color2;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    margin-top: 8rem;
-
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 30px;
+    transition: background-size 0.5s ease, background-position 0.5s ease;
+    &:hover {
+      background-image: radial-gradient(circle, #dfe6e9 0%, #2d3436 80%);
+      background-size: 110% 110%;
+      background-position: center center;
+    }
     > div {
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: $color5;
-        margin-bottom: 1rem;
+      font-size: 3rem;
+      border-bottom: 1px solid $color10;
     }
-
-    input,
-    textarea {
-        width: 100%;
-        padding: 1rem;
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background-color: $color5;
-        transition: all 0.3s ease;
-
-        &:focus {
-            outline: none;
-            border: 1px solid #007bff;
-            background-color: #f1f9ff;
-        }
-
-        &::placeholder {
-            color: #aaa;
-        }
+    > input {
+      width: 80%;
+      height: 10%;
+      padding: 0.5rem;
+      background-color: $color10;
+      border: 0;
+      outline: none;
+      border-radius: 10px;
+      color: $color9;
+      caret-color: $color9;
+      transition: 0.3s all;
+      &:focus {
+        width: 81%;
+      }
     }
-
-    textarea {
-        min-height: 150px;
-        resize: none;
+    > textarea {
+      width: 80%;
+      height: 40%;
+      resize: none;
+      padding: 0.5rem;
+      background-color: $color10;
+      border: 0;
+      outline: none;
+      border-radius: 10px;
+      color: $color9;
+      caret-color: $color9;
+      transition: 0.3s all;
+      &:focus {
+        width: 81%;
+      }
     }
-
-    button {
-        width: 100%;
-        padding: 1rem;
-        font-size: 1.2rem;
-        font-weight: bold;
-        border: none;
-        border-radius: 8px;
-        color: #fff;
-        background-color: #007bff;
-        cursor: pointer;
-        transition: all 0.3s ease;
-
-        &:hover {
-            background-color: #0056b3;
-        }
-
-        &:disabled {
-            background-color: $color6;
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-    }
-
-    .error {
-        margin-top: 1rem;
-        font-size: 1.2rem;
-        color: #e74c3c;
-    }
-
-    .loading {
-        margin-top: 1rem;
-        font-size: 1.2rem;
-        color: #f39c12;
-    }
+  }
 }
