@@ -49,6 +49,7 @@ export const Signup = () => {
             <button className="signup-btn" onClick={signup}>
               Signup
             </button>
+            <span className="or-span">or</span>
             <button className="signup-btn" onClick={() => navigate("/signin")}>
               Signin
             </button>
