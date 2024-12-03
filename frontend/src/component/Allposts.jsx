@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Allposts() {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ function Allposts() {
     try {
       const res = await axios.get(`${window.API_URL}/api/post/all`, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`,
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
 
@@ -39,35 +39,40 @@ function Allposts() {
 
   return (
     <div className="mainallposts">
-      <h1>Allposts</h1>
-      <div className="allposts">
-        
-
-        {loading && <div>Loading...</div>}
-        {error && <div>Error loading posts</div>}
-        {!loading &&
-          !error &&
-          posts.slice().reverse().map((post) => (
-            <div key={post._id}>
-              <Posts {...post} />
-            </div>
-          ))}
+      <div>
+        <h1>Allposts</h1>
+        <div className="allposts">
+          {loading && <div>Loading...</div>}
+          {error && <div>Error loading posts</div>}
+          {!loading &&
+            !error &&
+            posts
+              .slice()
+              .reverse()
+              .map((post) => (
+                <div key={post._id}>
+                  <Posts {...post} />
+                </div>
+              ))}
+        </div>
       </div>
-      
     </div>
   );
 }
-
 
 function Posts(props) {
   const navigate = useNavigate();
 
   return (
     <div className="posts" onClick={() => navigate(`/expandpost/${props._id}`)}>
-      <h1 className="titleall">{props.title}</h1>
-      <p className="contentall">{props.content}</p>
-      <p className="authorall">Author: {props.author?.name || 'Unknown'}</p>
-      <p className="dateall">Date: {new Date(props.date).toLocaleDateString()}</p>
+      <div className="authorDate-div">
+        <p className="authorall">Author: {props.author?.name || "Unknown"}</p>
+        <p className="dateall">{new Date(props.date).toLocaleDateString()}</p>
+      </div>
+      <div className="titleContent-div">
+        <h1 className="titleall">{props.title}</h1>
+        <p className="contentall">{props.content}</p>
+      </div>
     </div>
   );
 }
