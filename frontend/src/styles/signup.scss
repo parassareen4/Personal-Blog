@@ -44,6 +44,11 @@
     > div {
       display: flex;
       width: 70%;
+      > span {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 25px;
+      }
       > button {
         background-color: #0984e3;
         box-sizing: border-box;
@@ -73,11 +78,14 @@
 @media (max-width: 500px) {
   .signup > div:first-of-type {
     width: 80%;
-    height: 60%;
+    height: 70% !important;
   }
-  div:nth-of-type(2) {
+  .signup div:nth-of-type(2) {
     flex-direction: column;
     width: 100%;
+  }
+  .signup > div > span {
+    margin: 0 !important;
   }
   .signup-btn {
     width: 90% !important;
@@ -91,9 +99,12 @@
     width: 70%;
     height: 60%;
   }
-  div:nth-of-type(2) {
+  .signup div:nth-of-type(2) {
     flex-direction: column;
-    width: 100%;
+    width: 60%;
+  }
+  .signup .or-span {
+    margin: 0 !important;
   }
   .signup-btn {
     width: 90% !important;
