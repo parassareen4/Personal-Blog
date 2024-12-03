@@ -2,11 +2,12 @@
     .pprofile{
         display: flex;
         flex-direction: column;
+
         color: #e1e8ed;
         background-color:$color3;
         position: sticky;
         top: 0;
-        width: 45rem;
+        width: 100rem;
         height: 7rem;
         z-index: 1000;
 
@@ -32,62 +33,42 @@
             
             
             }
-        
-        
-    }
 
-
-
-
-
-
-.pposts{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #e1e8ed;
-    min-height: 100vh;
-    padding: 20px;
-
-    >div{
-        width: 90%; 
-        max-width: 600px; 
-        border-radius: 15px;
-        padding: 20px;
-        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
-
-        >div{
-            background-color: #253341; 
-        margin-bottom: 15px;
-        padding: 15px;
-        border-radius: 10px;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        word-wrap: break-word; 
-        display: flex;
-        flex-direction: column;
-        &:hover {
-            background-color: $color4; 
-            color: #ffffff;
-          }
-    
-          h1 {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 5px;
-          }
-    
-          p {
-            font-size: 14px;
-            margin: 2px 0;
-    
             
+        
+        
+    }
 
-          }}
+    .pposts{
+        
+       display: flex;
+       flex-direction: column;
 
+       margin-top: 1rem;
+       height: 100%;
+       
+       .ppostdiv{
+        background-color: $color4;
+        margin: 1rem;
+        height: 100%;
+        width: 100%;
+        border-radius: 25px;
+        position: relative;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.8;
+            transition: 0.1s;
+            
+          }
+       }
     }
 
 
 
-}
+
+
+
+  
+
+
+

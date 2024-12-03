@@ -48,39 +48,7 @@
           background-color: $color4; 
           color: #ffffff;
         }
-        .titleall{
-          font-size: 2.2rem;
-          background-color:$color3;
-          text-align: center;
-          padding: 1rem;
-          margin-bottom: 1rem;
-          color: white;
-          border-radius: 10px;
-          text-transform: capitalize;
-
-          
-        }
-        .contentall{
-          font-size: 1.8rem;
-          padding: 1rem;
-          margin-bottom: 5rem;
-
-          
-        }
-        .authorall{
-          position: absolute;
-          font-size: 1.2rem;
-          left: 1rem;
-          bottom: 0px;
-          color: #8899a6;
-        }
-        .dateall{
-          position: absolute;
-          font-size: 1.2rem;
-          right: 1rem;
-          bottom: 0px;
-          color: #8899a6;
-        }
+        
   
         
       }
@@ -126,6 +94,40 @@
         padding: 12px 20px;
       }
     }
+  }
+
+  .titleall{
+    font-size: 2.2rem;
+    background-color:$color3;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    border-radius: 10px;
+    text-transform: capitalize;
+
+    
+  }
+  .contentall{
+    font-size: 1.8rem;
+    padding: 1rem;
+    margin-bottom: 5rem;
+
+    
+  }
+  .authorall{
+    position: absolute;
+    font-size: 1.2rem;
+    left: 1rem;
+    bottom: 0px;
+    color: #8899a6;
+  }
+  .dateall{
+    position: absolute;
+    font-size: 1.2rem;
+    right: 1rem;
+    bottom: 0px;
+    color: #8899a6;
   }
   
 

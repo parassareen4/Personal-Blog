@@ -53,22 +53,20 @@ export const GetProfile = () => {
             </div>
 
           <div className="pposts">
-            <h1>My Posts</h1>
+            <h1 className="mypostheader">My Posts</h1>
             {posts.map((post) => {
             
                 return(
-                    <div>
                       
-                        <div onClick={() => navigate(`/expandpost/${post._id}`)}>
+                     <div className="ppostdiv" onClick={() => navigate(`/expandpost/${post._id}`)}>
 
                         
-                    <h1>title : {post.title}</h1>
-                    <p> content :{post.content}</p>
-                    <p>date : {new Date(post.date).toDateString()}</p>
+                    <h1 className="titleall">{post.title}</h1>
+                    <p className="contentall"> {post.content}</p>
                     <p>likes : {post.likes}</p>
                     <p>comments : {post.comments}</p>
+                    <p className="dateall">date : {new Date(post.date).toDateString()}</p>
                     </div>
-                        </div>
                     
                 )
               })}
