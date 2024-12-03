@@ -46,7 +46,7 @@ function Createpost() {
     <div>
       <div className="createpost">
         <div>
-          <div>Create Post</div>
+          <div className="create-post-tittle">Create Post</div>
 
           {loading && <div>Loading...</div>}
           {error && <div>Error creating post</div>}

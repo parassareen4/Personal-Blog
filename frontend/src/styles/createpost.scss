@@ -28,6 +28,8 @@
     > div {
       font-size: 3rem;
       border-bottom: 1px solid $color10;
+      color: $color9;
+      transition: 0.3s all;
     }
     > input {
       width: 80%;
@@ -75,4 +77,8 @@
       }
     }
   }
+}
+
+.createpost > div:hover .create-post-tittle {
+  color: $color10;
 }
