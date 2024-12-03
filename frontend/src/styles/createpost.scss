@@ -60,5 +60,18 @@
         width: 81%;
       }
     }
+    > button {
+      width: 40%;
+      height: 15%;
+      padding: 0.2rem;
+      font-size: 1.8rem;
+      border-radius: 10px;
+      transition: 0.3s all;
+      &:hover {
+        background-color: $color10;
+        color: $color9;
+        font-size: 1.9rem;
+      }
+    }
   }
 }
