@@ -46,8 +46,12 @@ export const Signup = () => {
             placeholder="password"
           />
           <div>
-            <button onClick={signup}>Signup</button>
-            <button onClick={() => navigate("/signin")}>Signin</button>
+            <button className="signup-btn" onClick={signup}>
+              Signup
+            </button>
+            <button className="signup-btn" onClick={() => navigate("/signin")}>
+              Signin
+            </button>
           </div>
         </div>
       </div>

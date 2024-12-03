@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  padding: 2rem;
   > div {
     padding: 1.5rem;
     width: 40%;
@@ -69,15 +70,34 @@
     }
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 500px) {
+  .signup > div:first-of-type {
+    width: 80%;
+    height: 60%;
+  }
   div:nth-of-type(2) {
     flex-direction: column;
     width: 100%;
+  }
+  .signup-btn {
+    width: 90% !important;
+    height: 35% !important;
+    margin: 1rem !important;
+  }
+}
 
-    > button {
-      width: 90% !important;
-      height: 35% !important;
-      margin: 1rem !important;
-    }
+@media (max-width: 1000px) {
+  .signup > div:first-of-type {
+    width: 70%;
+    height: 60%;
+  }
+  div:nth-of-type(2) {
+    flex-direction: column;
+    width: 100%;
+  }
+  .signup-btn {
+    width: 90% !important;
+    height: 40% !important;
+    margin: 1rem !important;
   }
 }
