@@ -1,85 +1,114 @@
-  .signup{
+.signup {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 2rem;
+  > div {
+    padding: 1.5rem;
+    width: 40%;
+    height: 50vh;
+    background-color: #2d3436;
+    border-radius: 50px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background-color: $color3;
-    >div{
-        font-size: 2rem;
-        color: $color5;
-        margin-bottom: 1rem;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    > div:first-of-type {
+      color: #dfe6e9;
+      font-size: 3rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
-    >input{
-        width: 20rem;
-        height: 2rem;
-        border: 2px solid $color1;
+    > input {
+      width: 60%;
+      margin: 0.5rem;
+      min-height: 15%;
+      outline: none;
+      border: none;
+      background-color: #2d3436;
+      border-bottom: 2px solid #dfe6e9;
+      transition: 0.3s all;
+      font-size: 1rem;
+      color: #dfe6e9;
+
+      &:focus {
+        width: 70%;
+      }
+    }
+    > div {
+      display: flex;
+      width: 70%;
+      > span {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 30px;
+      }
+      > button {
+        background-color: #0984e3;
+        box-sizing: border-box;
+        width: 40%;
+        height: 60%;
+        padding: 0.5rem;
+        border: 0;
+        transition: 0.3s all;
         border-radius: 10px;
-        padding: 9px;
-        margin: 0.5rem;
-        font-size: 1.2rem;
-        color: $color1;
-        background-color: $color5;
-        &:focus{
-            outline: none;
-            border: 2px solid $color5;
-            background-color: $color4;
-            color: $color5;
-        }
-    }
-    >button{
-        &:first-of-type{
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            width: 7rem;
-            height: 3rem;
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            border: 2px solid $color1;
-            border-radius: 10px;
-            color: $color5;
-            background-color: $color6;
-            &:hover{
-                background-color: $color7;
-                color: $color1;
-                border: 2px solid $color7;
-                cursor: pointer;
-                transition: 0.3s;
-
-            }
-            
-
-        }
-        &:last-of-type{
-            width: 21rem;
-        height: 4rem;
+        position: relative;
+        margin: 1.5rem;
+        color: #dfe6e9;
         font-size: 1.5rem;
-        margin-top: 1rem;
-        border: 2px solid $color1;
-        border-radius: 10px;
-        padding: 9px;
-        color: $color5;
-        background-color: $color6;
-        &:hover{
-            background-color: $color7;
-            color: $color1;
-            border: 2px solid $color7;
-            cursor: pointer;
-            transition: 0.3s;
 
+        &::before {
+          padding: 1px;
+          background-color: red;
+          position: absolute;
         }
-
-        &:focus{
-            outline: none;
-            opacity: 0.8;
-
+        &:hover {
+          opacity: 0.8;
         }
-            
-        }
-        
+      }
     }
-    
-    
   }
+}
+@media (max-width: 500px) {
+  .signup > div:first-of-type {
+    width: 80%;
+    height: 70% !important;
+  }
+  .signup div:nth-of-type(2) {
+    flex-direction: column;
+    width: 100%;
+  }
+  .signup > div > span {
+    margin: 0 !important;
+  }
+  .signup-btn {
+    width: 90% !important;
+    height: 35% !important;
+    margin: 1rem !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .signup > div:first-of-type {
+    width: 70%;
+    height: 60%;
+  }
+  .signup div:nth-of-type(2) {
+    flex-direction: column;
+    width: 60%;
+  }
+  .signup .or-span {
+    margin: 0 !important;
+  }
+  .signup-btn {
+    width: 90% !important;
+    height: 40% !important;
+    margin: 1rem !important;
+  }
+}
