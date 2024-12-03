@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Signup = () => {
   const [name, setName] = useState("");
@@ -23,44 +23,34 @@ export const Signup = () => {
   };
 
   return (
-    
-  <>
-  <div className="signup">
-            <button onClick={()=>navigate('/signin')}>Signin</button>
-            <div>Signup</div>
-            
-              <input
-                onChange={(e) => setName(e.target.value)}
-                type="text"
-                placeholder="name"
-              />
-            
-            
-              <input
-                onChange={(e) => setEmail(e.target.value)}
-                type="text"
-                placeholder="email"
-              />
-            
-            
-              <input
-                onChange={(e) => setPassword(e.target.value)}
-                type="text"
-                placeholder="password"
-              />
-            
-            
-              <button
-            
-                onClick={signup}
-              >
-                Signup
-              </button>
-            
-          </div>
-  </>
-          
+    <>
+      <div className="signup">
+        <div>
+          <div>Signup</div>
 
-    
+          <input
+            onChange={(e) => setName(e.target.value)}
+            type="text"
+            placeholder="name"
+          />
+
+          <input
+            onChange={(e) => setEmail(e.target.value)}
+            type="text"
+            placeholder="email"
+          />
+
+          <input
+            onChange={(e) => setPassword(e.target.value)}
+            type="text"
+            placeholder="password"
+          />
+          <div>
+            <button onClick={signup}>Signup</button>
+            <button onClick={() => navigate("/signin")}>Signin</button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
