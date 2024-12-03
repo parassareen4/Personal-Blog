@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const Signup = () => {
   const [name, setName] = useState("");
@@ -25,7 +26,12 @@ export const Signup = () => {
   return (
     <>
       <div className="signup">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, top: 150 }}
+          animate={{ opacity: 1, top: 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] }}
+        >
           <div>Signup</div>
 
           <input
@@ -54,7 +60,7 @@ export const Signup = () => {
               Signin
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
