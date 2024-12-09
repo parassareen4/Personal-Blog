@@ -19,7 +19,7 @@ This full-stack application is designed to provide a seamless user experience wi
 
 - React.js
 - HTML5
-- CSS3
+- SASS
 - JavaScript
 
 ### Backend
@@ -28,7 +28,6 @@ This full-stack application is designed to provide a seamless user experience wi
 - Express.js
 - MongoDB (or any other database you used)
 - JWT (JSON Web Tokens)
-- Bcrypt for password hashing
 
 ## Installation
 
